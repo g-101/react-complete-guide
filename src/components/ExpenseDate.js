@@ -1,4 +1,4 @@
-import './ExpenseDate';
+import './ExpenseDate.css';
 export const ExpenseDate = ({ props }) => {
   const date = props;
   const month = date.toLocaleString('en-US', { month: 'long' });
