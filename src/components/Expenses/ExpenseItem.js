@@ -1,7 +1,7 @@
 // O nome do arquivo do componente deve ser o mesmo da função do componente
 // Um componente em react é apenas uma função em javascript.
 import './ExpenseItem.css';
-import { Card } from './Card';
+import { Card } from '../UI/Card';
 import { ExpenseDate } from './ExpenseDate';
 export const ExpenseItem = ({ props }) => {
   /*o nome do parametro deve ser o mesmo nome passado como key no elemento pai */

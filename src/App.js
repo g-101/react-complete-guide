@@ -1,6 +1,6 @@
 import './App.css';
 
-import { Expenses } from './components/Expenses';
+import { Expenses } from './components/Expenses/indexExpenses';
 
 function App() {
   const expenses = [
