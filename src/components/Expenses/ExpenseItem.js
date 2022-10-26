@@ -6,7 +6,9 @@ import { ExpenseDate } from './ExpenseDate';
 export const ExpenseItem = ({ props }) => {
   /*o nome do parametro deve ser o mesmo nome passado como key no elemento pai */
   const { title, amount, date } = props;
-
+  const clickHandler = () => {
+    alert('click!');
+  };
   return (
     <Card className="expense-item">
       <ExpenseDate props={date} />
@@ -14,6 +16,7 @@ export const ExpenseItem = ({ props }) => {
         <h2>{title}</h2>
         <div className="expense-item__price">{amount}</div>
       </div>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 };
