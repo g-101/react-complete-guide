@@ -13,8 +13,19 @@ export const ExpenseForm = () => {
   const dateChangeHandler = event => {
     setEnteredDate(event.target.value);
   };
+  const submitHandler = event => {
+    //se o evento não for explicitamente manipulado, sua ação padrão não deve ser tomada como normalmente seria.
+    event.preventDefault();
+    // armazenou os valores de todos os inputs
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+    console.log(expenseData);
+  };
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -28,6 +39,9 @@ export const ExpenseForm = () => {
           <label>Date</label>
           <input type="date" min="2022-01-01" step="2022-12-31" onChange={dateChangeHandler} />
         </div>
+      </div>
+      <div className="new-expense__actions">
+        <button type="submit">Add Expense</button>
       </div>
     </form>
   );
